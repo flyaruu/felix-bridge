@@ -1,0 +1,5 @@
+*.war
+felix-cache
+CVS/Root
+CVS/Entries
+CVS/Repository

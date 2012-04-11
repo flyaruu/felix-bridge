@@ -1,0 +1,30 @@
+<project default="publish" name="NavajoEquinoxDeploy" basedir=".">
+
+	<target name="clean">
+		<delete dir="WEB-INF/eclipse" />
+		<delete dir="WEB-INF/lib" />
+	</target>
+	
+	<property name="deployPath" value="/Library/apache-tomcat-7.0.16/webapps"/>
+	<property name="deployWarName" value="NavajoFelixDeploy.war"/>
+	
+
+
+	<target name="archive" description="description" >
+		<delete file="${deployWarName}"></delete>
+		<war destfile="${deployWarName}">
+			<fileset dir=".">
+				<include name="WEB-INF/**/*" />
+				<include name="index.html" />
+			</fileset>
+		</war>
+
+	</target>
+
+	<target name="publish" depends="archive">
+		<copy file="${deployWarName}" tofile="${deployPath}/${deployWarName}" />
+
+	</target>
+
+
+</project>
