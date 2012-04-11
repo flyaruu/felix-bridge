@@ -26,12 +26,12 @@
     </listener>
 
     <listener>
-        <listener-class>com.dexels.proxy.ProxyListener</listener-class>
+        <listener-class>org.apache.felix.http.proxy.ProxyListener</listener-class>
     </listener>
 
     <servlet>
         <servlet-name>proxy</servlet-name>
-        <servlet-class>com.dexels.proxy.ProxyServlet</servlet-class>
+        <servlet-class>org.apache.felix.http.proxy.ProxyServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
 
