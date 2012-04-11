@@ -1,0 +1,7 @@
+I created this project to embed an OSGi runtime into a Servlet 3.0 application server.
+
+I've tried Equinox first, but there were several explicit dependencies to Servlet 2.x packages.
+Felix was much easier, but still it took me quite some fooling around (the samples on Felix's site
+aren't completely up to date with the latest Felix version) so I hope this saves some people some
+time.
+
